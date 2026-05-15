@@ -54,7 +54,7 @@ def pred():
 
     prediction = model.predict(feature)
     value = prediction*100/(28)
-    output = f'the Demand is {'very high' if value>75 else 'high' if 75>value>50 else 'low' if 50>value>25 else 'very low' } & percentage is {value}'
+    output = f'the Demand is {'very high' if value>75 else 'high' if 75>value>50 else 'low' if 50>value>25 else 'very low' }.'
 
     return render_template('index.html',prediction_text ='So according to given information {}'.format(output))
 
